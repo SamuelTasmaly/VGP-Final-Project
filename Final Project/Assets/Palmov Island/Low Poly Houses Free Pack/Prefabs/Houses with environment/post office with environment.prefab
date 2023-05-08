@@ -280,7 +280,9 @@ PrefabInstance:
       propertyPath: m_Name
       value: spruce border 2
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 2201953217620504776, guid: 4d94faf21b4e85d4ca57d39912518b9b, type: 3}
+    - {fileID: 7458154381254183526, guid: 4d94faf21b4e85d4ca57d39912518b9b, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 4d94faf21b4e85d4ca57d39912518b9b, type: 3}
 --- !u!4 &4862726694785744381 stripped
 Transform:
