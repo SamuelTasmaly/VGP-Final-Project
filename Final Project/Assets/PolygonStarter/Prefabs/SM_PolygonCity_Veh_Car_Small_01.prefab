@@ -200,7 +200,7 @@ GameObject:
   - component: {fileID: 4780459556601488}
   - component: {fileID: 33659509810881646}
   - component: {fileID: 23713301760779848}
-  - component: {fileID: 135918761070855524}
+  - component: {fileID: 6631729070900688601}
   m_Layer: 0
   m_Name: SM_PolygonCity_Veh_Car_Small_Wheel_fl
   m_TagString: Untagged
@@ -273,19 +273,36 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!135 &135918761070855524
-SphereCollider:
+--- !u!146 &6631729070900688601
+WheelCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1227554559889778}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_Center: {x: 0, y: 0, z: 0}
+  m_Radius: 0.5
+  m_SuspensionSpring:
+    spring: 35000
+    damper: 4500
+    targetPosition: 0.5
+  m_SuspensionDistance: 0.3
+  m_ForceAppPointDistance: 0
+  m_Mass: 1
+  m_WheelDampingRate: 0.25
+  m_ForwardFriction:
+    m_ExtremumSlip: 0.4
+    m_ExtremumValue: 1
+    m_AsymptoteSlip: 0.8
+    m_AsymptoteValue: 0.5
+    m_Stiffness: 1
+  m_SidewaysFriction:
+    m_ExtremumSlip: 0.2
+    m_ExtremumValue: 1
+    m_AsymptoteSlip: 0.5
+    m_AsymptoteValue: 0.75
+    m_Stiffness: 1
   m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 0.332806
-  m_Center: {x: -0.06698948, y: 0, z: -0.0000003427267}
 --- !u!1 &1285209684300818
 GameObject:
   m_ObjectHideFlags: 0
@@ -380,7 +397,7 @@ GameObject:
   - component: {fileID: 4204578181419218}
   - component: {fileID: 33064757265718768}
   - component: {fileID: 23414387805680066}
-  - component: {fileID: 135115458227926190}
+  - component: {fileID: 4829582931487292686}
   m_Layer: 0
   m_Name: SM_PolygonCity_Veh_Car_Small_Wheel_rr
   m_TagString: Untagged
@@ -453,19 +470,36 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!135 &135115458227926190
-SphereCollider:
+--- !u!146 &4829582931487292686
+WheelCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1412347233418504}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_Center: {x: 0, y: 0, z: 0}
+  m_Radius: 0.5
+  m_SuspensionSpring:
+    spring: 35000
+    damper: 4500
+    targetPosition: 0.5
+  m_SuspensionDistance: 0.3
+  m_ForceAppPointDistance: 0
+  m_Mass: 1
+  m_WheelDampingRate: 0.25
+  m_ForwardFriction:
+    m_ExtremumSlip: 0.4
+    m_ExtremumValue: 1
+    m_AsymptoteSlip: 0.8
+    m_AsymptoteValue: 0.5
+    m_Stiffness: 1
+  m_SidewaysFriction:
+    m_ExtremumSlip: 0.2
+    m_ExtremumValue: 1
+    m_AsymptoteSlip: 0.5
+    m_AsymptoteValue: 0.75
+    m_Stiffness: 1
   m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 0.3328057
-  m_Center: {x: 0.06698948, y: 0, z: -0.00000014901161}
 --- !u!1 &1819118115992832
 GameObject:
   m_ObjectHideFlags: 0
@@ -477,7 +511,7 @@ GameObject:
   - component: {fileID: 4813707125328556}
   - component: {fileID: 33023303779726342}
   - component: {fileID: 23277122319696274}
-  - component: {fileID: 135259066365143554}
+  - component: {fileID: 6647967483092679195}
   m_Layer: 0
   m_Name: SM_PolygonCity_Veh_Car_Small_Wheel_rl
   m_TagString: Untagged
@@ -550,19 +584,36 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!135 &135259066365143554
-SphereCollider:
+--- !u!146 &6647967483092679195
+WheelCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1819118115992832}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_Center: {x: 0, y: 0, z: 0}
+  m_Radius: 0.5
+  m_SuspensionSpring:
+    spring: 35000
+    damper: 4500
+    targetPosition: 0.5
+  m_SuspensionDistance: 0.3
+  m_ForceAppPointDistance: 0
+  m_Mass: 1
+  m_WheelDampingRate: 0.25
+  m_ForwardFriction:
+    m_ExtremumSlip: 0.4
+    m_ExtremumValue: 1
+    m_AsymptoteSlip: 0.8
+    m_AsymptoteValue: 0.5
+    m_Stiffness: 1
+  m_SidewaysFriction:
+    m_ExtremumSlip: 0.2
+    m_ExtremumValue: 1
+    m_AsymptoteSlip: 0.5
+    m_AsymptoteValue: 0.75
+    m_Stiffness: 1
   m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 0.3328057
-  m_Center: {x: -0.06698951, y: 0, z: -0.00000014901161}
 --- !u!1 &1820217718881792
 GameObject:
   m_ObjectHideFlags: 0
@@ -657,7 +708,7 @@ GameObject:
   - component: {fileID: 4842651712186468}
   - component: {fileID: 33007231198472852}
   - component: {fileID: 23516394748360564}
-  - component: {fileID: 135585611884400046}
+  - component: {fileID: 1853758809403577082}
   m_Layer: 0
   m_Name: SM_PolygonCity_Veh_Car_Small_Wheel_fr
   m_TagString: Untagged
@@ -730,19 +781,36 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!135 &135585611884400046
-SphereCollider:
+--- !u!146 &1853758809403577082
+WheelCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1869829906015034}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_Center: {x: 0, y: 0, z: 0}
+  m_Radius: 0.5
+  m_SuspensionSpring:
+    spring: 35000
+    damper: 4500
+    targetPosition: 0.5
+  m_SuspensionDistance: 0.3
+  m_ForceAppPointDistance: 0
+  m_Mass: 1
+  m_WheelDampingRate: 0.25
+  m_ForwardFriction:
+    m_ExtremumSlip: 0.4
+    m_ExtremumValue: 1
+    m_AsymptoteSlip: 0.8
+    m_AsymptoteValue: 0.5
+    m_Stiffness: 1
+  m_SidewaysFriction:
+    m_ExtremumSlip: 0.2
+    m_ExtremumValue: 1
+    m_AsymptoteSlip: 0.5
+    m_AsymptoteValue: 0.75
+    m_Stiffness: 1
   m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 0.332806
-  m_Center: {x: 0.06698952, y: 0, z: -0.0000003427267}
 --- !u!1 &1611080277181829721
 GameObject:
   m_ObjectHideFlags: 0
