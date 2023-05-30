@@ -13,7 +13,7 @@ public class PlayerController : MonoBehaviour
     {
 
         playerRb = GetComponent<Rigidbody>();
-        playerRb.centerOfMass = com;
+        //playerRb.centerOfMass = com;
     }
 
     void Update()
