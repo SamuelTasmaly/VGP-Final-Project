@@ -26,8 +26,8 @@ public class PlayerController : MonoBehaviour
         //
         float forward = Input.GetAxis ("Vertical") * speed;
 		GetComponent<Rigidbody>().AddRelativeForce (0, 0, forward);
-		float turn = Input.GetAxis ("Horizontal") * turnSpeed;
-		this.transform.Rotate (0, turn, 0);
+		//float turn = Input.GetAxis ("Horizontal") * turnSpeed;
+		//this.transform.Rotate (0, turn, 0);
         
     }
 }

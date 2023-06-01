@@ -14,8 +14,11 @@ public class WheelScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+
+        float verticalInput = Input.GetAxis("Vertical");
         float horizontalInput = Input.GetAxis("Horizontal");
         transform.Rotate(Vector3.up, 45 *horizontalInput*Time.deltaTime);
+        //transform.Rotate(Vector3.right, 100 *verticalInput*Time.deltaTime);
         
     }
 }
