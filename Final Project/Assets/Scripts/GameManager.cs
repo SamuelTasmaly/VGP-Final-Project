@@ -16,6 +16,7 @@ public class GameManager : MonoBehaviour
     public float lap = 0;
     public Camera interiorCamera;
     public Camera exteriorCamera;
+    public Camera menuCamera;
     // camera true is exteroir, camera false is interior
     public bool cameraAngle;
     // Start is called before the first frame update
@@ -29,6 +30,10 @@ public class GameManager : MonoBehaviour
 
         Button bckbtn = backButton.GetComponent<Button>();
         bckbtn.onClick.AddListener(backs);
+        exteriorCamera.enabled = false;
+        interiorCamera.enabled = false;
+
+        menuCamera.enabled = true;
     }
 
     // Update is called once per frame
@@ -73,6 +78,10 @@ public class GameManager : MonoBehaviour
         titleText.gameObject.SetActive(false);
         startButton.gameObject.SetActive(false);
         helpText.gameObject.SetActive(true);
+        controlsButton.gameObject.SetActive(false);
+        menuCamera.enabled = false;
+        exteriorCamera.enabled = true;
+
     }
 
     void contrls(){
@@ -80,9 +89,14 @@ public class GameManager : MonoBehaviour
         titleText.gameObject.SetActive(false);
         startButton.gameObject.SetActive(false);
         controlsButton.gameObject.SetActive(false);
+        backButton.gameObject.SetActive(true);
     }
 
     void backs(){
-        
+        controlsText.gameObject.SetActive(false);
+        titleText.gameObject.SetActive(true);
+        startButton.gameObject.SetActive(true);
+        controlsButton.gameObject.SetActive(true);
+        backButton.gameObject.SetActive(false);
     }
 }

@@ -1,75 +1,57 @@
 using UnityEngine;
 using System.Collections;
 
-
 public class CarController : MonoBehaviour
 {
     public WheelCollider[] wheelColliders;
     public Transform[] wheelMeshes;
-    public float motorForce = 1000f;
-    public float reverseForce = 500f;
-    public float brakingForce = 2000f;
-    public float steeringForce = 500f;
+    public float maxMotorTorque = 100f;
+    public float maxSteeringAngle = 30f;
 
-    private Rigidbody carRigidbody;
+    private float motor;
+    private float steering;
 
-    private void Start()
+
+
+    private void FixedUpdate()
     {
-        carRigidbody = GetComponent<Rigidbody>();
-    }
+        // Get input for motor and steering
+        motor = maxMotorTorque * Input.GetAxis("Vertical");
+        steering = maxSteeringAngle * Input.GetAxis("Horizontal");
 
-    private void Update()
-    {
-        float verticalInput = Input.GetAxis("Vertical");
-        float motor = 0f;
-        float braking = 0f;
+        // Apply motor torque to all wheel colliders
+        ApplyMotorTorque();
 
-        if (verticalInput > 0f)
-        {
-            motor = verticalInput * motorForce;
-        }
-        else if (verticalInput < 0f)
-        {
-            motor = verticalInput * reverseForce;
-        }
-        else
-        {
-            braking = Input.GetKey(KeyCode.Space) ? brakingForce : 0f;
-        }
+        // Apply steering angle to front wheel colliders
+        ApplySteeringAngle();
 
-        float steering = Input.GetAxis("Horizontal") * steeringForce;
-
-        ApplyMotorTorque(motor - braking);
-        ApplySteering(steering);
-
+        // Update wheel meshes rotation and position based on wheel colliders
         UpdateWheelMeshes();
     }
 
-    private void ApplyMotorTorque(float torque)
+    private void ApplyMotorTorque()
     {
         foreach (WheelCollider wheelCollider in wheelColliders)
         {
-            wheelCollider.motorTorque = torque;
+            wheelCollider.motorTorque = motor;
         }
     }
 
-    private void ApplySteering(float steering)
+    private void ApplySteeringAngle()
     {
-        foreach (WheelCollider wheelCollider in wheelColliders)
-        {
-            wheelCollider.steerAngle = steering;
-        }
+        wheelColliders[0].steerAngle = steering; // Front left wheel
+        wheelColliders[1].steerAngle = steering; // Front right wheel
     }
 
     private void UpdateWheelMeshes()
     {
         for (int i = 0; i < wheelColliders.Length; i++)
         {
-            Quaternion wheelRotation;
-            Vector3 wheelPosition;
-            wheelColliders[i].GetWorldPose(out wheelPosition, out wheelRotation);
-            wheelMeshes[i].position = wheelPosition;
-            wheelMeshes[i].rotation = wheelRotation;
+            Quaternion rotation;
+            Vector3 position;
+            wheelColliders[i].GetWorldPose(out position, out rotation);
+            wheelMeshes[i].position = position;
+            wheelMeshes[i].rotation = rotation;
         }
     }
 }
